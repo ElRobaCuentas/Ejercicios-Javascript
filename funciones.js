@@ -407,3 +407,42 @@ const desencriptarPalabraNombre = (desencriptarNombre) => {
 encriptarPalabra("giancarlo")
 desencriptarPalabraNombre("o1l2r3a4c5n6a7i8g9")
 //////////////////////////////////////////////////////////////////////////
+
+
+// * retornar la fecha en un objeto
+// {
+//   dia: jueves,
+//   diaNumero: 1,
+//   mes: abril,
+//   año: 2021 	
+// }
+
+// * ecuacion f(x) = x▼2 + raiz(x) + (x/2)
+
+// * encriptar y desencriptar una palabra 
+//   -> maria -> airam (a1i2r3a4m5) -> maria 
+
+
+
+// const encriptar = (palabra) => {
+  
+//     let encript = palabra.split('').reverse();
+//     let encript2 = encript.map( (caracter, index) => {
+//       return `${caracter}${index+1}`;
+//     } )
+//     console.log(`encriptado -> ${encript2.join('')}`);
+//   }
+  
+  
+//   const descencriptar = (palabra) => {
+    
+//     let encript = palabra.split('')
+//     let encript2 = encript.filter( (caracter, index) => {
+//       return !Number(caracter)
+//     } )
+//     console.log(`encriptado -> ${encript2.reverse().join('')}`);
+//   }
+  
+  
+//   // encriptar("ezequiel");
+//   descencriptar("l1e2i3u4q5e6z7e8");
