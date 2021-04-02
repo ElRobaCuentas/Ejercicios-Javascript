@@ -1,213 +1,86 @@
-/*ÁREA DE UN CIRCULO*/
-
-// const areaCirculo = (radio) => {
-//     let pi = 3.14;
-
-//     let multiplicacion = radio * radio;
-
-//     let area = pi * multiplicacion;
-//     console.log("el area es:", area)
-// }
+////////////////////////////*AREA DE UN CIRCULO*//////////////////////////////////////////////
+const areaCirculo = (radio) => {
+    let pi = 3.14;
+    let multiplicacion = radio * radio;
+    let area = pi * multiplicacion;
+    console.log("el area es:", area)
+}
 
 // areaCirculo(35);
 
-// const areaRectangulo = (base, altura) => {
 
-//     let area = base * altura;
-
-//     console.log("el area es", area);
-// }
+////////////////////////////*AREA DE UN RECTANGULO*//////////////////////////////////////////////
+const areaRectangulo = (base, altura) => {
+    let area = base * altura;
+    console.log("el area es", area);
+}
 
 // areaRectangulo(4, 9);
 
-// volumenCubo = (altura, ancho, largo) => {
-//     if (typeof (largo) === "string") {
-//         console.log("el dato esta mal")
-//     } else {
-//         let volumen = altura * ancho * largo;
-//         console.log("el volumen de un cubo es:", volumen);
-//     }
-// }
+
+////////////////////////////*AREA DE UN CUBO*//////////////////////////////////////////////
+const volumenCubo = (altura, ancho, largo) => {
+    if (typeof (largo) === "string") {
+        console.log("el dato esta mal")
+    } else {
+        let volumen = altura * ancho * largo;
+        console.log("el volumen de un cubo es:", volumen);
+    }
+}
+
 // volumenCubo(19, 15, 12);
-
-/////////////////////////////////////////////////////////////
-
-/*PARTIR UNA PALABRA*/
-
-// let numeros = [34, 12, 6, 2, 17, 89, 7, 14, 60, 2]
-
-// numeros.forEach(( numbers ) => {
-//     if(numbers > 1 ) {
-//         console.log("si es mayor:", numbers)
-//         } 
-//     })
 
 
 //////////////////////////////*FILTRAR SOLO NUMEROS IMPARES*//////////////////////////////////////////
+let arrayNumeros = [ 20, 21, 23, 50]
+
+const obtenerNumerosImpares = (arregloNumeros) => {
+    let impares = arregloNumeros.filter((numero) => {
+        if(numero % 2 === 1 ) {
+            console.log(numero)
+            return true;
+        }
+    })   
+    console.log("NUMEROS INPARES: ", impares)     
+}
+
+// obtenerNumerosImpares(arrayNumeros);
 
 
-// let numeros = [ 20, 21, 23, 50]
-// // let resultado = [ 21, 75, 57, 37, 45]
-
-// const obtenerNumerosImpares = (arregloNumeros) => {
-//     let impares = arregloNumeros.filter((numero) => {
-//         if(numero % 2 === 1 ) {
-//             console.log(numero)
-//             return true;
-//         }
-//     })   
-//     console.log("IMAPRES", impares)     
-// }
-
-// obtenerNumerosImpares(numeros);
-
-//////////////////////////////////////////////////////////////////////////
-
-
-//////////////////*SEPARACION DE UN NOMBRE*//////////////////////////////////////////////////////
-
-
+////////////////////////////*PARTIR A LA MITAD UNA PALABRA*//////////////////////////////////////////////
 const separacionNombre = (nombreHola) => {
-
     let cantidadCaracteres = nombreHola.length;
-
     let separacionNombreOne = nombreHola.slice(cantidadCaracteres / 2, cantidadCaracteres);
     let separacionNombreTwo = nombreHola.slice(0, cantidadCaracteres / 2);
     console.log("primera parte", separacionNombreTwo);
     console.log("segunda parte", separacionNombreOne);
 }
 
-separacionNombre("giancarlo");
+// separacionNombre("giancarlo");
 
 
-//////////////////////////////////////////////////////////////////////////
-
-
-////////////////////////////*CUENTAS VECES QUIERO QUE ME APAREZCA LA VARIABLE*//////////////////////////////////////////////
-
-let numerosCantidades = [{"numero:": 5}]
-
+////////////////////////////*MOSTRAR X VECES UNA PALABRA ("hola mundo")*//////////////////////////////////////////////
 const cantidadNumeros = (veces) => {
     for ( i = 0; i < veces; i++) {
-        console.log("5")
+        console.log("hola mundo")
     }
 }
 
-cantidadNumeros(5);
-
-//////////////////////////////////////////////////////////////////////////
+// cantidadNumeros(5);
 
 
-////////////////////////////*ORDENAR NUMEROS*//////////////////////////////////////////////
-
+////////////////////////////*ORDENAR NUMEROS DE MENOS A MAYOR*//////////////////////////////////////////////
 let numeros = [ 26, 234, 5, 50, 21, 10, 4, 9, 23, 18]
-
-// const ordenarNumeros = (numeros) => {
-//     let arreglados = numeros.sort((numeroArreglados) => {
-//                 if(numeroArreglados > 1) {
-//                     console.log("numeros", numeroArreglados)
-//                 }
-//             })   
-//             console.log("numeros ordenados", arreglados)
-// }
 
 const ordenarNumeros = (numeros) => {
     let arreglados = numeros.sort((a, b) => a - b ) ;
     console.log("ordenar", arreglados)    
 }
 
-ordenarNumeros(numeros);
-
-//////////////////////////////////////////////////////////////////////////
+// ordenarNumeros(numeros);
 
 
-////////////////////////////*INVERTIR UNA PALABRA*//////////////////////////////////////////////
-
-const invertirPalabra = (tuko) => {
-    let invertirString = tuko.split('');
-    console.log("invertir palabra", invertirString)
-
-    let invetirStringTwo = invertirString.reverse();
-    console.log("inversion", invetirStringTwo)
-}
-
-invertirPalabra("palabra");
-
-//////////////////////////////////////////////////////////////////////////
-
-
-////////////////////////////*DUPLICAR UN ARREGLO Y DESPUES SUMARLO*//////////////////////////////////////////////
-
-let multiplicarSumar = [4, 6, 10]
-
-const sumarMultiplicarNumero = (sumaMul) => {
-    let multiplicacionNumeros = sumaMul.map( num => {
-        return num*2
-    }) 
-    console.log(multiplicacionNumeros)
-
-    let sumarNumeros = multiplicacionNumeros.reduce( (suma, mul) => suma + mul )  
-    console.log(sumarNumeros)
-}
-
-sumarMultiplicarNumero(multiplicarSumar);
-
-//////////////////////////////////////////////////////////////////////////
-
-
-////////////////////////////*ENCONTRAR PALABRAS QUE RIMEN*//////////////////////////////////////////////
-
-let rimaPalabras = ["Romper", "Hacer", "Tropezar", "Tomar", "Agua", "Entretener", "Correr", "Tongo", "Tecla", "Tocer", "Tizer", "Master"]
-
-const HacerRimaPalabras = (rimas) => {
-    
-    let palabrasER = rimas.filter( numero  => {
-
-        let palabras = numero.endsWith("er");
-        // console.log("rima", palabras);
-        
-        if(palabras) {
-            return palabras;
-        }
-    })
-    console.log("rima de palabras", palabrasER)
-}
-
-HacerRimaPalabras(rimaPalabras);
-
-//////////////////////////////////////////////////////////////////////////
-
-
-////////////////////////////*BSUCADOR DE PALABRAS*//////////////////////////////////////////////
-
-let buscadorPalabras = `Bedtime Stories es el sexto álbum de estudio de la cantante cantante estadounidense Madonna, publicado por primera vez el 21 de octubre de 1994 por las compañías Maverick, Sire y Warner Bros. Records. Para la producción, colaboró con Dallas Austin, Babyface, Dave «Jam» Hall y Nellee Hooper con el objetivo de cambiar a un sonido más convencional y atenuar su imagen pública, tras enfrentar respuestas negativas crítica y comercialmente por proyectos sexualmente explícitos en 1992, especialmente con el álbum Erotica y el libro Sex. El lanzamiento del sencillo «I'll Remember» en marzo de 1994, para la banda sonora del filme With Honors, marcó el comienzo de esta nueva transformación y continuó con Bedtime Stories. De géneros pop y R&B, las letras exploran temas como el amor, la tristeza y el romance, pero con un enfoque más suave y reflexivo. No obstante, en otras canciones aborda la polémica en relación con sus trabajos anteriores, lo que los críticos analizaron como autobiográfico. Madonna también quería explorar la música club británica, cuyos géneros como el dub habían ganado popularidad, por lo que trabajó con la cantante islandesa Björk.`
-
-const searchPalabras = (texto) => { 
-    let search = buscadorPalabras.split(' ');
-    console.log("search", search)
-
-    let filtarPalabra = search.filter((cadaElemento) => {
-        if(cadaElemento === texto) {
-            return true; 
-        }
-    })
-
-    console.log("hola", filtarPalabra)
-
-    if(filtarPalabra.length > 0) {
-        console.log("si me retorna algo", filtarPalabra)
-    } else {
-        console.log("no me retorna nada", filtarPalabra);
-    }
-}
-
-searchPalabras("sexto");
-
-//////////////////////////////////////////////////////////////////////////
-
-
-////////////////////////////*HACIENDO LA LÓGICA DEL LA FUNCIÓN "sort" -> ordenar números*//////////////////////////////////////////////
-
+////////////////////////////*HACIENDO LA LÓGICA DEL LA FUNCIÓN "sort" -> ordenar números (METODO DE BURBUJA)*//////////////////////////////////////////////
 let arr = [34, 3, 67, 23, 7, 46]
 
 const ordenar = (arreglo) => {
@@ -221,17 +94,73 @@ const ordenar = (arreglo) => {
             }
         }
     }
-    console.log("final", arreglo)
+    console.log("Numeros ordenados de menos a mayor a menor", arreglo)
 }
 
-ordenar(arr)
+// ordenar(arr)
 
 
-//////////////////////////////////////////////////////////////////////////
+////////////////////////////*INVERTIR UNA PALABRA*//////////////////////////////////////////////
+const invertirPalabra = (tuko) => {
+    let invertirString = tuko.split('');
+    let invetirStringTwo = invertirString.reverse();
+    console.log("Palabra invertida", invetirStringTwo)
+}
+
+// invertirPalabra("palabra");
 
 
-////////////////////////////*HACIENDO LA LÓGICA DEL LA FUNCIÓN "sort" -> ordenar números*//////////////////////////////////////////////
+////////////////////////////*DUPLICAR LOS VALORES DEL ARREGLO Y DESPUES SUMARLO*//////////////////////////////////////////////
+let multiplicarSumar = [4, 6, 10]
 
+const sumarMultiplicarNumero = (sumaMul) => {
+    let multiplicacionNumeros = sumaMul.map( num => {
+        return num*2
+    }) 
+    let sumarNumeros = multiplicacionNumeros.reduce( (suma, mul) => suma + mul )  
+    console.log("SUMA DE NUMEROS DEL ARREGLO DUPLICADO: ", sumarNumeros)
+}
+
+// sumarMultiplicarNumero(multiplicarSumar);
+
+
+////////////////////////////*ENCONTRAR PALABRAS QUE RIMEN*//////////////////////////////////////////////
+let rimaPalabras = ["Romper", "Hacer", "Tropezar", "Tomar", "Agua", "Entretener", "Correr", "Tongo", "Tecla", "Tocer", "Tizer", "Master"]
+
+const HacerRimaPalabras = (rimas) => {  
+    let palabrasER = rimas.filter( numero  => {
+        let palabras = numero.endsWith("er");
+        if(palabras) {
+            return palabras;
+        }
+    })
+    console.log("PALABRA QUE RIMEN: ", palabrasER)
+}
+
+// HacerRimaPalabras(rimaPalabras);
+
+
+////////////////////////////*BUSCADOR DE PALABRAS*//////////////////////////////////////////////
+let buscadorPalabras = `Bedtime Stories es el sexto álbum de estudio de la cantante cantante estadounidense Madonna, publicado por primera vez el 21 de octubre de 1994 por las compañías Maverick, Sire y Warner Bros. Records. Para la producción, colaboró con Dallas Austin, Babyface, Dave «Jam» Hall y Nellee Hooper con el objetivo de cambiar a un sonido más convencional y atenuar su imagen pública, tras enfrentar respuestas negativas crítica y comercialmente por proyectos sexualmente explícitos en 1992, especialmente con el álbum Erotica y el libro Sex. El lanzamiento del sencillo «I'll Remember» en marzo de 1994, para la banda sonora del filme With Honors, marcó el comienzo de esta nueva transformación y continuó con Bedtime Stories. De géneros pop y R&B, las letras exploran temas como el amor, la tristeza y el romance, pero con un enfoque más suave y reflexivo. No obstante, en otras canciones aborda la polémica en relación con sus trabajos anteriores, lo que los críticos analizaron como autobiográfico. Madonna también quería explorar la música club británica, cuyos géneros como el dub habían ganado popularidad, por lo que trabajó con la cantante islandesa Björk.`
+
+const searchPalabras = (texto) => { 
+    let search = buscadorPalabras.split(' ');
+    let filtarPalabra = search.filter((cadaElemento) => {
+        if(cadaElemento === texto) {
+            return true; 
+        }
+    })
+    if(filtarPalabra.length > 0) {
+        console.log("La palabra ingresada existe: ", filtarPalabra)
+    } else {
+        console.log("La palabra no existe en el texto: ", filtarPalabra);
+    }
+}
+
+// searchPalabras("sexto");
+
+
+////////////////////////////*SUMAR LAS EDADES DE LOS USUARIOS MAYORES DE 13 AÑOS*//////////////////////////////////////////////
 let array = [
     {
       id: 1,
@@ -265,33 +194,24 @@ let array = [
     }
    ];
     
-  
-   const sumarEdades = (edad) => {
-       
-       let filtrarSuma = edad.filter(( sumaSuma ) => {
-           if(sumaSuma.edad > 13) {
-               return true;
-            } 
-        })
+const sumarEdades = (edad) => {
+    let filtrarSuma = edad.filter(( sumaSuma ) => {
+        if(sumaSuma.edad > 13) {
+            return true;
+        } 
+    })
 
-        console.log("sumaSuma", filtrarSuma)
-        
+    let sumarEdades = filtrarSuma.reduce((acumulador, suma) => {
+        acumulador = acumulador + suma.edad;
+        return acumulador;
+    }, 0)
+    console.log("Suma de las edades de usuarios mayores de 13 años: ", sumarEdades)
+}
 
-        let sumarEdades = filtrarSuma.reduce((acumulador, suma) => {
-          acumulador = acumulador + suma.edad;
-          return acumulador;
-        }, 0)
-        console.log("suma", sumarEdades)
-  }
-
-sumarEdades(array);
+// sumarEdades(array);
   
 
-//////////////////////////////////////////////////////////////////////////
-
-
-////////////////////////////*VALIDAR USUARIO*//////////////////////////////////////////////
-
+////////////////////////////*VALIDAR USUARIO (user y password)*//////////////////////////////////////////////
 let userLogin = [
     {
      user: "juan",
@@ -325,32 +245,26 @@ let userLogin = [
     }
    ];
 
-  
 const validarUser = (usuario, contraseña) => {
     let entrarUsuario = userLogin.filter(( login ) => {
         if(login.user === usuario && login.password === contraseña) {
             return true;
          }
-     });
-    //  console.log("user", entrarUsuario)
+    });
 
-     if(entrarUsuario.length > 0) {
+    if(entrarUsuario.length > 0) {
         console.log("usted se registro en nuesta base de datos", entrarUsuario)
     } else {
         console.log("el usuario o contraseña no existe", entrarUsuario);
     }
 }  
 
-validarUser("junior", "junior123qw")
-
-//////////////////////////////////////////////////////////////////////////
+// validarUser("junior", "junior123qw")
 
 
-////////////////////////////*RETORNAR LA FECHA EN UN OBJETO*//////////////////////////////////////////////
-
+////////////////////////////*RETORNAR LA FECHA EN UN OBJETO { MES, DIA, AÑO}  *//////////////////////////////////////////////
 const validarFecha = (x) => {
     let date = new Date(x)
-    console.log("fecha variable:", date)
     
     let objeto = {
         mes: date.getMonth()+1,
@@ -360,13 +274,10 @@ const validarFecha = (x) => {
     console.log("Resultado fecha:", objeto)
 }  
 
-validarFecha("4/21/2038")
-
-//////////////////////////////////////////////////////////////////////////
+// validarFecha("4/21/2038")
 
 
-////////////////////////////*ECUCACION*//////////////////////////////////////////////
-
+////////////////////////////*ECUCACION ( f(x) = x▼2 + raiz(x) + (x/2) )*//////////////////////////////////////////////
 const resolverEcuacion = (x) => {
     let primero = x * x; 
     let segundo = Math.sqrt(x);
@@ -375,9 +286,7 @@ const resolverEcuacion = (x) => {
     console.log("ecuacion", resultado)
 }
 
-resolverEcuacion(2)
-
-//////////////////////////////////////////////////////////////////////////
+// resolverEcuacion(2)
 
 
 ////////////////////////////*ENCRIPTAR Y DESENCRIPTAR PALABRA*//////////////////////////////////////////////
@@ -404,45 +313,26 @@ const desencriptarPalabraNombre = (desencriptarNombre) => {
     console.log("desencriptacion", encript.join(''))
 }
 
-encriptarPalabra("giancarlo")
-desencriptarPalabraNombre("o1l2r3a4c5n6a7i8g9")
-//////////////////////////////////////////////////////////////////////////
+// encriptarPalabra("giancarlo")
+// desencriptarPalabraNombre("o1l2r3a4c5n6a7i8g9")
 
 
-// * retornar la fecha en un objeto
-// {
-//   dia: jueves,
-//   diaNumero: 1,
-//   mes: abril,
-//   año: 2021 	
-// }
-
-// * ecuacion f(x) = x▼2 + raiz(x) + (x/2)
-
-// * encriptar y desencriptar una palabra 
-//   -> maria -> airam (a1i2r3a4m5) -> maria 
-
-
-
-// const encriptar = (palabra) => {
+////////////////////////////*ENCRIPTAR Y DESENCRIPTAR PALABRA (calin)*//////////////////////////////////////////////
+const encriptar = (palabra) => {
+    let encript = palabra.split('').reverse();
+    let encript2 = encript.map( (caracter, index) => {
+      return `${caracter}${index+1}`;
+    })
+    console.log(`encriptado -> ${encript2.join('')}`);
+}
   
-//     let encript = palabra.split('').reverse();
-//     let encript2 = encript.map( (caracter, index) => {
-//       return `${caracter}${index+1}`;
-//     } )
-//     console.log(`encriptado -> ${encript2.join('')}`);
-//   }
+const descencriptar = (palabra) => {
+    let encript = palabra.split('')
+    let encript2 = encript.filter( (caracter, index) => {
+        return !Number(caracter)
+    } )
+    console.log(`encriptado -> ${encript2.reverse().join('')}`);
+}
   
-  
-//   const descencriptar = (palabra) => {
-    
-//     let encript = palabra.split('')
-//     let encript2 = encript.filter( (caracter, index) => {
-//       return !Number(caracter)
-//     } )
-//     console.log(`encriptado -> ${encript2.reverse().join('')}`);
-//   }
-  
-  
-//   // encriptar("ezequiel");
-//   descencriptar("l1e2i3u4q5e6z7e8");
+// encriptar("ezequiel");
+// descencriptar("l1e2i3u4q5e6z7e8");
