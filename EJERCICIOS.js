@@ -1,5 +1,7 @@
 /* 
-    * 
+    * INPUT -> PROCESAR -> OUTPUT
+    * ENTRAS -> PROCESAR -> SALIDA
+    * funcion(INPUT) -> const funcion = (INPUT) => { PROCESAR -> return OUTPUT }
 */
 
 // (1)  -> AREA DE UN CIRCULO
