@@ -22,15 +22,15 @@
     let input = "1/25/2021"; output = { MES, DIA, AÑO };
 // (16) -> ECUCACION ( f(x) = x▼2 + raiz(x) + (x/2) )
 // (17) -> ENCRIPTAR Y DESENCRIPTAR PALABRA
+// (18) -> TEOREMA DE PITAGORAS
+// (22) -> PROMEDIO DE NOTAS BASICO
+    let input = [12, 15, 14, 15]; output = "X";
 
 
 
 //======================== NUEVOS EJERCICIOS ============================================
-// (18) -> TEOREMA DE PITAGORAS
 // (19) -> CANTIDAD DE DOBLECES DE UNA HOJA CUANTA DISTANCIA EN KM FORMA
 // (20) -> TRANSFORMAR DE KM/HORA A METROS/SEGUNDO
     let input = "10 km/h"; output = "X m/s";
 // (21) -> GRAVEDAD EN LA TIERRA Y EN OTROS PLANETAS
-// (22) -> PROMEDIO DE NOTAS BASICO
-    let input = [12, 15, 14, 15]; output = "X";
 // (23) -> PROMEDIO DE NOTAS BASICO CON PORCENTAGE

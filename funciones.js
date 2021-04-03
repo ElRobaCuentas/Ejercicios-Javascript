@@ -336,3 +336,39 @@ const descencriptar = (palabra) => {
   
 // encriptar("ezequiel");
 // descencriptar("l1e2i3u4q5e6z7e8");
+
+
+////////////////////////////*HALLAR EL TEOREMA DE PITAGORAS*//////////////////////////////////////////////
+
+console.log("*TAREA*")
+
+const teoremaPitagoras = (c, cc, h ) => {
+    let catetoOne = c * c;
+    let catetoTwo = cc * cc;
+    let resultado = catetoOne + catetoTwo
+    console.log("hipotenusa", resultado)
+
+    let hipotenusa = h * h;
+    let resultadoGeneral = Math.sqrt(resultado)
+    console.log("resultado mayor", resultadoGeneral)
+}
+
+// teoremaPitagoras(1, Math.sqrt(3))
+
+
+////////////////////////////*PROMEDIO DE NOTAS BASICO*//////////////////////////////////////////////
+
+let notas = [10, 11, 12, 13, 12, 19, 17, 16, 13, 05, 01, 01]
+
+const promedioNotas = (nota) => {
+    let promediarNotas = notas.reduce((acumulador, sumar) => {
+        acumulador = acumulador + sumar;
+        return acumulador;
+    });
+
+    let calcularElementos = notas.length
+    let sumako = promediarNotas / calcularElementos
+    console.log("mi promedio es:", sumako) 
+}
+
+// promedioNotas(notas)
