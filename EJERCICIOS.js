@@ -270,4 +270,3 @@ let input = [
     }
 ]
 let output = 123452;
-
