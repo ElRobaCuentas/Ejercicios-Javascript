@@ -358,17 +358,38 @@ const teoremaPitagoras = (c, cc, h ) => {
 
 ////////////////////////////*PROMEDIO DE NOTAS BASICO*//////////////////////////////////////////////
 
-let notas = [10, 11, 12, 13, 12, 19, 17, 16, 13, 05, 01, 01]
+let notas = [12, 14, 15, 20]
 
-const promedioNotas = (nota) => {
-    let promediarNotas = notas.reduce((acumulador, sumar) => {
-        acumulador = acumulador + sumar;
-        return acumulador;
+const promedioNotas = (notaNota) => {
+    let promediarNotas = notaNota.reduce(( acumulador, proko) => {
+        acumulador = acumulador + proko
+        return acumulador
     });
+    console.log("holaaa", promediarNotas)
 
-    let calcularElementos = notas.length
-    let sumako = promediarNotas / calcularElementos
-    console.log("mi promedio es:", sumako) 
+    let calcularNota = notas.length;
+    console.log("lol", calcularNota)
+
+    let sumarNotas = calcularNota / promediarNotas
+    console.log("calcule todo", sumarNotas)
 }
+
+promedioNotas(notas)
+
+
+////////////////////////////*PROMEDIO DE NOTAS BASICO*//////////////////////////////////////////////
+
+// let notas = [10, 11, 12, 13, 12, 19, 17, 16, 13, 05, 01, 01]
+
+// const promedioNotas = (nota) => {
+//     let promediarNotas = notas.reduce((acumulador, sumar) => {
+//         acumulador = acumulador + sumar;
+//         return acumulador;
+//     });
+
+//     let calcularElementos = notas.length
+//     let sumako = promediarNotas / calcularElementos
+//     console.log("mi promedio es:", sumako) 
+// }
 
 // promedioNotas(notas)
