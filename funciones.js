@@ -658,26 +658,26 @@ let validarValor = [
     }
 ]
 
-// const sacarMigajas = (pichon) => {
-//     let filtrar = validarValor.filter((impares) => {
-//         if (impares.id % 2) {
-//             return true;
-//         }
-//     })
-//     console.log("solo impares", filtrar)
+const sacarMigajas = (pichon) => {
+    let filtrar = validarValor.filter((impares) => {
+        if (impares.id % 2) {
+            return true;
+        }
+    })
+    console.log("solo impares", filtrar)
 
-//     let LALO = validarValor.map((restar) => {
-//         let mostarLL = restar.address.geo
-//         console.log("lat y long", mostarLL)
+    let LALO = validarValor.map((restar) => {
+        let mostarLL = restar.address.geo
+        console.log("lat y long", mostarLL)
 
-//         return restar.address.geo.lat - restar.address.geo.lng
-//     })
-//     console.log("solo impares", LALO)
+        return restar.address.geo.lat - restar.address.geo.lng
+    })
+    console.log("solo impares", LALO)
 
-//     let promediarSuma = LALO.reduce((acumulador, sumaSuma) => {
-//         acumulador = acumulador + sumaSuma;
-//         return acumulador;
-//     });
-//     console.log("suma de todo", promediarSuma)
-// }
+    let promediarSuma = LALO.reduce((acumulador, sumaSuma) => {
+        acumulador = acumulador + sumaSuma;
+        return acumulador;
+    });
+    console.log("suma de todo", promediarSuma)
+}
 // sacarMigajas()
