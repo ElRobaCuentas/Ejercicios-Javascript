@@ -212,52 +212,52 @@ const searchPalabras = (texto) => {
 
 
 ////////////////////////////*VALIDAR USUARIO (user y password)*//////////////////////////////////////////////
-// let userLogin = [
-//     {
-//      user: "juan",
-//       password: "juan123",
-//       edad: 14
-//     },
-//     {
-//      user: "daniel",
-//       password: "daniel123",
-//       edad: 12
-//     },
-//     {
-//      user: "calin",
-//       password: "calin123",
-//       edad: 60
-//     },
-//     {
-//      user: "ezequiel",
-//       password: "ezequiel123",
-//       edad: 13
-//     },
-//     {
-//      user: "hilda",
-//       password: "hilda123",
-//       edad: 59
-//     },
-//     {
-//       user: "junior",
-//       password: "junior123",
-//       edad: 48
-//     }
-//    ];
+let userLogin = [
+    {
+     user: "juan",
+      password: "juan123",
+      edad: 14
+    },
+    {
+     user: "daniel",
+      password: "daniel123",
+      edad: 12
+    },
+    {
+     user: "calin",
+      password: "calin123",
+      edad: 60
+    },
+    {
+     user: "ezequiel",
+      password: "ezequiel123",
+      edad: 13
+    },
+    {
+     user: "hilda",
+      password: "hilda123",
+      edad: 59
+    },
+    {
+      user: "junior",
+      password: "junior123",
+      edad: 48
+    }
+   ];
 
-// const validarUser = (usuario, contraseña) => {
-//     let entrarUsuario = userLogin.filter(( login ) => {
-//         if(login.user === usuario && login.password === contraseña) {
-//             return true;
-//          }
-//     });
+const validarUser = (usuario, contraseña) => {
+    let entrarUsuario = userLogin.filter(( login ) => {
+        if(login.user === usuario && login.password === contraseña) {
+            return true;
+         }
+    });
 
-//     if(entrarUsuario.length > 0) {
-//         console.log("usted se registro en nuesta base de datos", entrarUsuario)
-//     } else {
-//         console.log("el usuario o contraseña no existe", entrarUsuario);
-//     }
-// }  
+    if(entrarUsuario.length > 0) {
+        console.log("usted se registro en nuesta base de datos", entrarUsuario)
+    } else {
+        console.log("el usuario o contraseña no existe", entrarUsuario);
+    }
+}  
 
 // validarUser("junior", "junior123qw")
 
